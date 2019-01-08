@@ -14,11 +14,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class ConstructorInjectedControllerTest {
 
 
-    private ContructorInjectedController controller;
+    private ConstructorInjectedController controller;
 
     @Before
     public void setUp() {
-        controller = new ContructorInjectedController(new GreetingServiceImpl());
+        controller = new ConstructorInjectedController(new GreetingServiceImpl());
     }
 
     @Test
