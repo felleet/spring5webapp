@@ -4,6 +4,7 @@ import com.example.spring5webapp.controllers.ConstructorInjectedController;
 import com.example.spring5webapp.controllers.MyController;
 import com.example.spring5webapp.controllers.PropertyInjectedController;
 import com.example.spring5webapp.controllers.SetterInjectedController;
+import com.example.spring5webapp.examplebeans.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -20,5 +21,9 @@ public class Spring5webappApplication {
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+
+
+		FakeDataSource dataSource = ctx.getBean(FakeDataSource.class);
+		System.out.println(dataSource.getUser());
 	}
 }
