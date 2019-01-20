@@ -29,4 +29,13 @@ public class FakeDataSource {
     public void setDburl(String dburl) {
         this.dburl = dburl;
     }
+
+    @Override
+    public String toString() {
+        return "FakeDataSource{" +
+                "user='" + user + '\'' +
+                ", password='" + password + '\'' +
+                ", dburl='" + dburl + '\'' +
+                '}';
+    }
 }
